@@ -29,8 +29,8 @@ RUN \
  tar xfz  /tmp/s6-overlay.tar.gz -C / && \
  echo "**** add plexdrive ****" && \
  cd /tmp && \
- wget https://github.com/Bleuh/plexdrive/raw/master/releases/plexdriveteam && \
- mv plexdriveteam /usr/bin/plexdrive && \
+ wget https://github.com/Bleuh/plexdrive/releases/download/6/plexdrive && \
+ mv plexdrive /usr/bin/plexdrive && \
  chmod 777 /usr/bin/plexdrive && \
  echo "**** create abc user ****" && \
  groupmod -g 1000 users && \
