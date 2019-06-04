@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-MAINTAINER wiserain
 
 # global environment settings
 ENV PLEXDRIVE_VERSION="5.0.0"
@@ -30,8 +29,8 @@ RUN \
  tar xfz  /tmp/s6-overlay.tar.gz -C / && \
  echo "**** add plexdrive ****" && \
  cd /tmp && \
- wget https://github.com/dweidenfeld/plexdrive/releases/download/${PLEXDRIVE_VERSION}/plexdrive-linux-${PLATFORM_ARCH} && \
- mv plexdrive-linux-${PLATFORM_ARCH} /usr/bin/plexdrive && \
+ wget https://github.com/Bleuh/plexdrive/raw/master/releases/plexdriveteam && \
+ mv plexdriveteam /usr/bin/plexdrive && \
  chmod 777 /usr/bin/plexdrive && \
  echo "**** create abc user ****" && \
  groupmod -g 1000 users && \
